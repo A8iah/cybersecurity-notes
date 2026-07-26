@@ -14,14 +14,17 @@ curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-in
 - Username: `admin`
 - Password: () 
 
-### 4. Access the Wazuh Dashboard
+### 4. Access the Wazuh Dashboard ✅
 Open Firefox in Kali and go to:
 ​```
-https://localhost
+https://localhost OR https://127.0.0.1
 ​```
-https://127.0.0.1
-```
-Accept the self-signed certificate warning, then login with the credentials above.
+
+
+
+
+
+
 
 ## Useful Commands
 
