@@ -1,29 +1,18 @@
 # Wazuh Installation on Kali Linux
 
-## Prerequisites
-- Kali Linux (VirtualBox VM or bare metal)
-- Minimum 6 GB RAM allocated
-- Internet connection
-- Sudo access
+### 1. Open Terminal in Kali 
 
-## Installation Steps
-
-### 1. Open Terminal in Kali
-
-### 2. Run the Wazuh Quickstart installer
+### 2. Run the Wazuh Quickstart installer ✅
 ​```bash
 curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ​```
 
 - Enter sudo password when prompted (default: `kali`)
 - Installation takes 10-20 minutes
-- Ignore the warning about Kali not being in the recommended systems list
 
-### 3. Save the credentials
-At the end of installation, Wazuh will display:
-- Dashboard URL (usually `https://localhost` or `https://<VM-IP>`)
+### 3. Save the credentials ✅
 - Username: `admin`
-- Password: ()
+- Password: () 
 
 ### 4. Access the Wazuh Dashboard
 Open Firefox in Kali and go to:
