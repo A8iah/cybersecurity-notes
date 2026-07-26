@@ -19,7 +19,8 @@ Open Firefox in Kali and go to:
 ​```
 https://localhost
 ​```
-
+https://127.0.0.1
+```
 Accept the self-signed certificate warning, then login with the credentials above.
 
 ## Useful Commands
