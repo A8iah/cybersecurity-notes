@@ -52,8 +52,3 @@ sudo cat /var/log/wazuh-install.log
 sudo tar -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 sudo cat wazuh-install-files/wazuh-passwords.txt
 ​```
-
-## Notes
-- Wazuh is a SIEM tool (Security Information and Event Management)
-- Purpose: collects, analyzes, and displays security alerts from monitored systems
-- Official docs: https://documentation.wazuh.com
