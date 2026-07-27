@@ -1,4 +1,6 @@
 # SIEM
+(Security Information and Event Management)
+Click on the link to see a real picture of the SIEM itself that we installed on KALI ( https://wazuh.com/platform/overview/ )
 
 | English |
 |---------|
