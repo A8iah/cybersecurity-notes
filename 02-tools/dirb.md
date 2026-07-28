@@ -6,5 +6,5 @@
 | If the director's line starts with > (+) this is what we want. |
 
 ​```
-dirb (Add any link here)
+​bash dirb (Add any link here)
 ​```
