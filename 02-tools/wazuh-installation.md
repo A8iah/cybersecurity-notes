@@ -22,6 +22,7 @@ https://localhost OR https://127.0.0.1
 
 ## Useful Commands
 ```bash
+
 **Check Wazuh services status**
 -sudo systemctl status wazuh-manager
 -sudo systemctl status wazuh-indexer
@@ -38,4 +39,5 @@ https://localhost OR https://127.0.0.1
  **Retrieve passwords if forgotten**
 -sudo tar -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 -sudo cat wazuh-install-files/wazuh-passwords.txt
+
 ​```
