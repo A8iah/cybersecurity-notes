@@ -10,11 +10,11 @@ curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-in
 - Enter sudo password when prompted (default: `kali`)
 - Installation takes 10-20 minutes
 
-### 3. Save the credentials ✅
+### 3. Save the credentials 
 - Username: `admin`
 - Password: () 
 
-### 4. Access the Wazuh Dashboard ✅
+### 4. Access the Wazuh Dashboard 
 Open Firefox in Kali and go to:
 ​```
 https://localhost OR https://127.0.0.1
@@ -22,7 +22,7 @@ https://localhost OR https://127.0.0.1
 
 ## Useful Commands
 ```bash
-### Check Wazuh services status
+**Check Wazuh services status**
 -sudo systemctl status wazuh-manager
 -sudo systemctl status wazuh-indexer
 -sudo systemctl status wazuh-dashboard
