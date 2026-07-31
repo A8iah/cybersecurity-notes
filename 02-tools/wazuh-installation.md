@@ -22,36 +22,6 @@ https://localhost OR https://127.0.0.1
 
 ## Useful Commands
 
-```bash
-**Check Wazuh services status**
--sudo systemctl status wazuh-manager
--sudo systemctl status wazuh-indexer
--sudo systemctl status wazuh-dashboard
-​```
-
-**Start / Stop / Restart services**
-```bash
--sudo systemctl start wazuh-manager
--sudo systemctl stop wazuh-manager
--sudo systemctl restart wazuh-manager
-​```
-
-**View installation log**
-```bash
--sudo cat /var/log/wazuh-install.log
-​```
-
- **Retrieve passwords if forgotten**
-```bash
--sudo tar -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
--sudo cat wazuh-install-files/wazuh-passwords.txt
-```
-​
-
-
-
-## Useful Commands
-
 **Check Wazuh services status**
 ```bash
 sudo systemctl status wazuh-manager
