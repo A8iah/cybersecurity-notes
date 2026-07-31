@@ -20,19 +20,16 @@ Open Firefox in Kali and go to:
 https://localhost OR https://127.0.0.1
 ​```
 
-
-
-
-
-
-
 ## Useful Commands
 
 ### Check Wazuh services status
 
 ​```bash
 -sudo systemctl status wazuh-manager
+```
+```bash
 -sudo systemctl status wazuh-indexer
+```bash
 -sudo systemctl status wazuh-dashboard
 ​```
 
