@@ -5,9 +5,8 @@
 
 
 
-
-
-Open the website you want.
+Open the website you want.<details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.
+</span></details>
 1- F12 → opens DevTools
 2- Go to the Network tab.
 3- Press ⊘ (Clear) to clear the list.
