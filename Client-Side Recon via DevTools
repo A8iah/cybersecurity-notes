@@ -1,6 +1,0 @@
-Open the website you want.
-F12 → opens DevTools
-Go to the Network tab.
-Press ⊘ (Clear) to clear the list.
-F5 or Ctrl+R to reload the page
-Look for the Source Code File — the file that contains the source code of the page (HTML/JS/any language).
