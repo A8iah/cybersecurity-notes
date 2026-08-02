@@ -1,3 +1,48 @@
+
+1- F12 → opens DevTools
+<details><summary></summary><span dir="rtl">1- F12 → يفتح أدوات المطور</span></details>
+
+2- Go to the Network tab.
+<details><summary></summary><span dir="rtl">2- انتقل إلى تبويب Network.</span></details>
+
+3- Press ⊘ (Clear) to clear the list.
+<details><summary></summary><span dir="rtl">3- اضغط على ⊘ (Clear) لمسح القائمة.</span></details>
+
+4- F5 or Ctrl+R to reload the page.
+<details><summary></summary><span dir="rtl">4- اضغط F5 أو Ctrl+R لإعادة تحميل الصفحة.</span></details>
+
+5- Look for the Source Code File — the file that contains the source code of the page (HTML/JS/any language).
+<details><summary></summary><span dir="rtl">5- ابحث عن Source Code File — الملف اللي فيه الكود المصدري للصفحة (HTML/JS/أي لغة).</span></details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Open the website you want.
 1- F12 → opens DevTools
 2- Go to the Network tab.
