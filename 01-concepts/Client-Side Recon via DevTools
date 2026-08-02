@@ -1,9 +1,3 @@
-# DevTools <details><summary></summary><span dir="rtl">أدوات المطور</span></details>
-
-# Network Tab <details><summary></summary><span dir="rtl">تبويب الشبكة</span></details>
-
-# Source Code File <details><summary></summary><span dir="rtl">ملف الكود المصدري</span></details>
-
 | English |
 |---------|
 | F12 → opens DevTools <details><summary></summary><span dir="rtl">F12 → يفتح أدوات المطور</span></details> |
@@ -11,10 +5,6 @@
 | Press ⊘ (Clear) to clear the list. <details><summary></summary><span dir="rtl">اضغط على ⊘ (Clear) لمسح القائمة.</span></details> |
 | F5 or Ctrl+R to reload the page. <details><summary></summary><span dir="rtl">اضغط F5 أو Ctrl+R لإعادة تحميل الصفحة.</span></details> |
 | Look for the Source Code File — the file that contains the source code of the page (HTML/JS/any language). <details><summary></summary><span dir="rtl">ابحث عن Source Code File — الملف اللي فيه الكود المصدري للصفحة (HTML/JS/أي لغة).</span></details> |
-
-
-
-
 
 
 
