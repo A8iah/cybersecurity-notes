@@ -1,5 +1,121 @@
-# Test <details><summary></summary><span dir="rtl">اختبار</span></details>
 
-Open the website you want. <details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.</span></details>
 
-1- F12 → opens DevTools <details><summary></summary><span dir="rtl">F12 → يفتح أدوات المطور</span></details>
+
+
+
+
+
+
+
+
+Open the website you want.<details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.
+</span></details>
+- F12 → opens DevTools
+- Go to the Network tab.
+- Press ⊘ (Clear) to clear the list.
+- F5 or Ctrl+R to reload the page
+- Look for the Source Code File — the file that contains the source code of the page (HTML/JS/any language).
+افتح الموقع الذي تريده.
+- F12 → يفتح أدوات المطور
+٢- انتقل إلى علامة التبويب الشبكة.
+٣- اضغط على ⊘ (مسح) لمسح القائمة.
+٤- اضغط على F5 أو Ctrl+R لإعادة تحميل الصفحة
+٥- ابحث عن ملف الشيفرة المصدرية — الملف الذي يحتوي على الشيفرة المصدرية للصفحة (HTML/JS/أي لغة).
+What are we looking for in the response?
+
+- We look for comments in the code because they might contain notes about hidden features or notes under development. We might also find links to administrative pages, and we might find names of developers or internal information. In general, it's important to read all the comments in the code.
+
+- API endpoints: They are used to access the server, and the website uses them to fetch data (usually in JSON format). We collect these endpoints from various sources such as JS files, HTML code, or directly from the Network tab. Then we use the cURL tool to test and interact with it without a browser. The syntax: curl <link>. The tool runs in PowerShell / CMD / Terminal and sends HTTP requests directly. And the best use for it is Kali Linux.
+
+- Leaked keys: In short, some developers write keys that are supposed to be hidden on the server, but sometimes the developer mistakenly writes them in the Frontend code that anyone can read from the browser. We access these keys thru the Sources or Response tab, and press Ctrl+F to search by name:
+
+##(These names are examples, but search until you find the files)
+
+api_key / apikey / API_KEY
+secret / SECRET
+Code
+Password
+AKIA (beginning of AWS keys)
+sk_live_ or sk_test_ (Stripe)
+
+Very important note:
+Not every key you find = is a vulnerability. There are public keys designed to be visible (like the Google Maps API key for the frontend). The difference:
+
+Public key = It appears in the frontend normally, with limited permissions.
+Secret key = It should never be displayed, if it appears = vulnerability
+
+- Information about the backend: This is information about the server and the technologies the site operates on (server type, version, programming language, framework). This information helps the attacker look for known vulnerabilities specific to that version. We access it thru (Tab Headers → Response Headers).
+
+After accessing and knowing the server, the first thing we do is go to a site like CVE Details and search for the server version → it gives us a list of vulnerabilities (CVEs). I mentioned the site here as an example only. Secondly, we take the CVE number and go to Exploit-DB to search for it → if there is a ready exploit code, we download it and try it.
+
+There is also another type of leak, which is if the site gives me error messages, we might be able to identify the type of database (MySQL, PostgreSQL) and we might also find complete stack traces.
+
+- Insecure Cookies: Cookies are small files stored by the server in your browser to remember you (like a login session). If the cookie doesn't have sufficient security features, it becomes easy for an attacker to steal or exploit it. We can access it thru Response Headers → look for the line: Set-Cookie:
+
+In short: The cookie should have HttpOnly + Secure + SameSite. If one of them is missing, it's a vulnerability:
+
+Without HttpOnly → Theft via XSS
+Without Secure → Theft via HTTP
+Without SameSite → CSRF attacks
+
+After that, right-click on the request → Save all as HAR → All requests will be saved in one file that we can analyze later.
+
+Or right-click → Copy as cURL → It copies the entire request (link + headers + cookies + method), we paste it in Terminal and modify it. It works in CMD or PowerShell, but it's better in Kali Linux.
+
+##Advanced tools after DevTools:
+
+- Burp Suite: The most famous tool, it is a proxy that intercepts and modifies all requests.
+- OWASP ZAP: A free open-source alternative to Burp.
+- ffuf / gobuster: brute-force tools for discovering hidden directories.
+- nuclei: Automatic scanning for known vulnerabilities.
+- sqlmap: for automatically testing SQL injection.
+
+ماذا نبحث عنه في الرد؟
+
+- نبحث عن التعليقات في الشيفرة لأنها قد تحتوي على ملاحظات حول الميزات المخفية أو الملاحظات قيد التطوير.  قد نجد أيضًا روابط لصفحات إدارية، وقد نجد أسماء المطورين أو معلومات داخلية.  بشكل عام، من المهم قراءة جميع التعليقات في الشيفرة.
+
+٢- نقاط نهاية واجهة برمجة التطبيقات (API): تُستخدم للوصول إلى الخادم، ويستخدمها الموقع لجلب البيانات (عادةً بتنسيق JSON).  نجمع هذه النقاط النهائية من مصادر مختلفة مثل ملفات JS، أو كود HTML، أو مباشرة من علامة التبويب Network.  ثم نستخدم أداة cURL لاختبارها والتفاعل معها دون الحاجة إلى متصفح.  الصيغة: curl <link>.  الأداة تعمل في PowerShell / CMD / Terminal وترسل طلبات HTTP مباشرة.  وأفضل استخدام له هو كالي لينكس.
+
+٣- المفاتيح المسربة: باختصار، يكتب بعض المطورين مفاتيح من المفترض أن تكون مخفية على الخادم، ولكن في بعض الأحيان يكتبها المطور عن طريق الخطأ في كود الواجهة الأمامية الذي يمكن لأي شخص قراءته من المتصفح.  نصل إلى هذه المفاتيح من خلال علامة التبويب Sources أو Response، ونضغط على Ctrl+F للبحث بالاسم:
+
+##(هذه الأسماء أمثلة، لكن ابحث حتى تجد الملفات)
+
+مفتاح_الواجهة_البرمجية / مفتاح_الواجهة_البرمجية / مفتاح_الواجهة_البرمجية
+سر / سر
+رمز
+كلمة المرور
+AKIA (بداية مفاتيح AWS)
+sk_live_ أو sk_test_ (Stripe)
+
+ملاحظة مهمة جدًا:
+ليس كل مفتاح تجده = هو ثغرة.  هناك مفاتيح عامة مصممة لتكون مرئية (مثل مفتاح واجهة برمجة تطبيقات خرائط جوجل للواجهة الأمامية).  الفرق:
+
+المفتاح العام = يظهر في الواجهة الأمامية عادةً، مع أذونات محدودة.
+المفتاح السري = يجب ألا يتم عرضه أبدًا، إذا ظهر = ثغرة أمنية
+
+٤- معلومات حول الواجهة الخلفية: هذه معلومات حول الخادم والتقنيات التي يعمل عليها الموقع (نوع الخادم، الإصدار، لغة البرمجة، الإطار).  تساعد هذه المعلومات المهاجم في البحث عن الثغرات المعروفة الخاصة بتلك النسخة.  نصل إليه من خلال (رؤوس التبويب → رؤوس الاستجابة).
+
+بعد الوصول إلى الخادم ومعرفته، أول شيء نقوم به هو الذهاب إلى موقع مثل CVE Details والبحث عن إصدار الخادم → يعطينا قائمة بالثغرات (CVEs).  ذكرت الموقع هنا كمثال فقط.  ثانيًا، نأخذ رقم CVE ونذهب إلى Exploit-DB للبحث عنه → إذا كان هناك كود استغلال جاهز، نقوم بتحميله وتجربته.
+
+هناك نوع آخر من التسريبات، وهو إذا أعطاني الموقع رسائل خطأ، فقد نتمكن من تحديد نوع قاعدة البيانات (MySQL، PostgreSQL) وقد نجد أيضًا تتبعات كاملة.
+
+٥- الكوكيز غير الآمنة: الكوكيز هي ملفات صغيرة يتم تخزينها بواسطة الخادم في متصفحك لتذكرك (مثل جلسة تسجيل الدخول).  إذا لم يكن لدى الكوكيز ميزات أمان كافية، يصبح من السهل على المهاجم سرقته أو استغلاله.  يمكننا الوصول إليه من خلال رؤوس الاستجابة → ابحث عن السطر:  Set-Cookie:
+
+باختصار: يجب أن يحتوي الكوكي على HttpOnly + Secure + SameSite.  إذا كان أحدها مفقودًا، فهذه ثغرة:
+
+بدون HttpOnly → سرقة عبر XSS
+بدون Secure → سرقة عبر HTTP
+بدون SameSite → هجمات CSRF
+
+بعد ذلك، انقر بزر الماوس الأيمن على الطلب → احفظ الكل كملف HAR → سيتم حفظ جميع الطلبات في ملف واحد يمكننا تحليله لاحقًا.
+
+أو انقر بزر الماوس الأيمن → انسخ كـ cURL →  يقوم بنسخ الطلب بالكامل (الرابط + الرؤوس + الكوكيز + الطريقة)، نقوم بلصقه في الطرفية ونعدله.  يعمل في CMD أو PowerShell، لكنه أفضل في Kali Linux.
+
+##أدوات متقدمة بعد DevTools:
+
+- Burp Suite: الأداة الأكثر شهرة، هي وكيل يعترض ويعدل جميع الطلبات.
+- OWASP ZAP: بديل مجاني ومفتوح المصدر لـ Burp.
+- ffuf / gobuster: أدوات القوة الغاشمة لاكتشاف الأدلة المخفية.
+- nuclei: المسح التلقائي للثغرات المعروفة.
+- sqlmap: لاختبار حقن SQL تلقائيًا.
+
