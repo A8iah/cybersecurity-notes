@@ -1,6 +1,19 @@
+# Client-Side Recon via DevTools <details><summary></summary><span dir="rtl">الاستطلاع من جهة العميل عبر أدوات المطور</span></details>
+
+Open the website you want. <details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.</span></details>
+
+1- F12 → opens DevTools <details><summary></summary><span dir="rtl">F12 → يفتح أدوات المطور</span></details>
+
+2- Go to the Network tab. <details><summary></summary><span dir="rtl">انتقل إلى تبويب Network.</span></details>
 
 
-Open the website you want.<details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.</span></details>
+
+
+
+
+
+
+
 
 
 Open the website you want.<details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.
