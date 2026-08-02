@@ -1,5 +1,3 @@
-
-
 # Client-Side Recon via DevTools <details><summary></summary><span dir="rtl">الاستطلاع من جهة العميل عبر أدوات المطور</span></details>
 
 Open the website you want. <details><summary></summary><span dir="rtl">افتح الموقع الذي تريده.</span></details>
@@ -66,35 +64,3 @@ Or right-click → Copy as cURL → It copies the entire request (link + headers
 4- nuclei: Automatic scanning for known vulnerabilities. <details><summary></summary><span dir="rtl">4- nuclei: المسح التلقائي للثغرات المعروفة.</span></details>
 
 5- sqlmap: for automatically testing SQL injection. <details><summary></summary><span dir="rtl">5- sqlmap: لاختبار حقن SQL تلقائيًا.</span></details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
