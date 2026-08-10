@@ -40,3 +40,27 @@ cd vulhub && ls
 ```bash
 cd  We write it here. && ls
 ```
+**In this case, I can access any loophole, but only after I write her name.**
+```bash
+cd vulhub/Here, write the name of the vulnerability.
+```
+**Read it in this matter.**
+```
+cat README.md
+```
+**In this matter, I see it as a few versions.**
+```
+ls
+```
+**In this matter, I enter her environment.**
+```bash
+sudo docker-compose up -d
+```
+**In this matter, I am out of her environment.**
+```bash
+sudo docker-compose down
+```
+**And I can take a step back in this matter.**
+```bash
+cd ..
+```
